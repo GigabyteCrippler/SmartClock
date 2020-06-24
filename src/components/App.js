@@ -5,33 +5,48 @@ import Weather from './Weather.js';
 
 
 class App extends React.Component {
-   state = {
-     Time : new Date().toLocaleString(),
-     Date : new Date().toDateString()
-   }
+  constructor(){
+    super();
 
-    // get current time
-    // get 24 hour time
-    // get current date
+    this.state = {
+      Time : new Date().toLocaleString(),
+      Date : new Date().toDateString(),
+      Hours: new Date().getHours(),
+      TwentyFourHours: false ,
+    }
+      // this.toggleHours = this.toggleHours.bind(this);
+  }
+
+
+    //weather
     // get weather from api
-    // check out other app
+    // get 24 hour time
+  //   toggleHours() {
+  //     this.setState((prevState) => ({ TwentyFourHours: !prevState.TwentyFourHours }));
+  // }
+
+    // App.js
     // write an switch statement , to change backgorund as time changes
     // add toggle to switch between 24 hour and 12 hour
+
+
+    // ideas
     // if greater than doesnt work use the 24 hour option
     // can a switch statement be written for if its between this and this make it this
-    // set css to push  all elements to the center
-    // the writing s should be in white bold
-    // time should be the largest
-    // look at stylesheet of weather app
-    // location should be on top smaller writing next to the svg
-    // a diffrent classname for each element rendered
-    // try yo keep all styles in the index.css
     // a toggle button should be used to switch between 24 and 12
     // how to keep it constantly refreshing (check clock app )
-    // make it refrsh ever second 
+    // make it refrsh ever second
 
 
+    // need to change multiple states simultaneously
+  //   startTime() {
+  //     this.timer = setInterval(() => {
+  //         this.setState(() => ({ Date:new Date().toDateString(),
+  //         Time :  new Date().toLocaleString()}));
+  //     }, 1000);
+  // }
 
+    // trial code
     // if(time > 20 :00 pm ){
     //   set the backgorund style to this night
     // }
@@ -46,18 +61,45 @@ class App extends React.Component {
     // look at how it is written in clock app
 
 
+    // css
+    // set css to push  all elements to the center
+    // the writing s should be in white bold
+    // time should be the largest
+    // location should be on top smaller writing next to the svg
+    // a diffrent classname for each element rendered
+    // try yo keep all styles in the index.css
+    // var d = new Date().gethours();
+    // // var n = d.getTime();
+    //  if(this.state.hours < 20 ) {
+    // day should be applied for the background
+    // // see how to apply styles inline
+    // // set the background image to this ;                 ;
+    //  } else {
+    // night should be applied for the background ;  ;
+    //  }
 
+
+
+  //   class Section extends Component {
+  //     render() {
+  //       return (
+  //         <section style={ sectionStyle }>
+  //         </section>
+  //     );
+  //   }
+  // }
 
    render(){
       return (
-        <div className="App">
-          <p>{this.state.Time.substring(10,24)}</p>
-          <p>{this.state.Date}</p>
-          <Weather/>
+        <div className="trial">
+          <div className = 'center'>
+            <p className = 'time'>{this.state.Time.substring(10,24)}</p>
+            <p className = 'date'>{this.state.Date}</p>
+            <p>{this.state.Hours}</p>
+          </div>
         </div>
       );
     }
 }
-
 
 export default App;
