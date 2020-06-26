@@ -14,21 +14,27 @@
 .center{
   height: 100px;
    width: 100px;
-   position: absolute;
-   left: 50%;
+   position : inherit;
+   left: 60%;
    margin-left: -50px;
    top: 50%;
    margin-top: -50px;
 }
 
-.date {
-  height: 20px;
-  width: 150px;
-  font-size: 30px;
-  font-style: italic;
-  }
 
 .time{
-    font-size: 30px;
+    height: 40px;
+    width:1300px ;
+    font-size: 60px;
     font-style: oblique 10deg;
+    font-family:Krona One ;
+    right : 500px;
 }
+
+.date {
+  height: 70px;
+  width: 200px;
+  font-size: 25px;
+  font-style: italic;
+  font-family: Roboto;
+  }
