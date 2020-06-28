@@ -25,10 +25,10 @@ class App extends React.Component {
    render(){
       return (
         <div className="trial">
+        <div> <Weather/> </div>
           <div className = 'center'>
             <p className = 'time'>{this.state.Time.substring(10,24)}</p>
             <p className = 'date'>{this.state.Date}</p>
-            <Weather/>
             <p>{this.state.Hours}</p>
           </div>
         </div>
