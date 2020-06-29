@@ -17,14 +17,10 @@ class Weather extends React.Component {
      this.skyconsFunction = this.skyconsFunction.bind(this);
    }
 
+
      componentDidMount(){
         this.apiRequest();
-        navigator.geolocation.getCurrentPosition(
-        position => this.setState({
-          latitude : position.coords.latitude ,
-          longitude : position.coords.longitude,
-        })
-      )
+        this.navigationFunction()
     }
 
     componentDidUpdate(){
@@ -33,7 +29,16 @@ class Weather extends React.Component {
 
 
 
-    skyconsFunction(props){
+    navigationFunction(){
+      navigator.geolocation.getCurrentPosition(
+      position => this.setState({
+        latitude : position.coords.latitude ,
+        longitude : position.coords.longitude,
+      }))
+    }
+
+
+    skyconsFunction(){
       const skycons = new Skycons({ color: "white" });
       const currentIcon = (this.state.icon).replace(/-/g, "_").toUpperCase() ;
       skycons.play();
