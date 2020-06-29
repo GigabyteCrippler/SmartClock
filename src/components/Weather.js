@@ -12,16 +12,12 @@ class Weather extends React.Component {
       temperature : null ,
       summary : null ,
       timezone : null ,
-      icon : null
+      icon : null ,
     };
+     this.skyconsFunction = this.skyconsFunction.bind(this);
    }
 
-
-
-
-
      componentDidMount(){
-        this.skyconsFunction();
         this.apiRequest();
         navigator.geolocation.getCurrentPosition(
         position => this.setState({
@@ -31,22 +27,17 @@ class Weather extends React.Component {
       )
     }
 
-
-    // function setIcons(icon, iconID) {
-    //     const skycons = new Skycons({ "color": "white" })
-    //     /*skycons and darksky have diffrent ways of writing tempreture descriptions
-    //      the code below is used to make them the same */
-    //     const currentIcon = icon.replace(/-/g, "_").toUpperCase();
-    //     skycons.play();
-    //     return skycons.set(iconID, Skycons[currentIcon]);
-    // }
+    componentDidUpdate(){
+        this.skyconsFunction();
+    }
 
 
-    skyconsFunction(){
+
+    skyconsFunction(props){
       const skycons = new Skycons({ color: "white" });
-      skycons.add(this.ref.current, Skycons.PARTLY_CLOUDY_DAY);
-      //const currentIcon = icon.replace(/-/g, "_").toUpperCase();
+      const currentIcon = (this.state.icon).replace(/-/g, "_").toUpperCase() ;
       skycons.play();
+      skycons.set(this.ref.current, Skycons[currentIcon]);
     }
 
 
@@ -67,7 +58,6 @@ class Weather extends React.Component {
 
 
    render(){
-     console.log('I was triggered during render')
       return (
         <div>
         <div>  <canvas ref={this.ref} width="128" height="128" /> </div>
