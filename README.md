@@ -1,5 +1,5 @@
 ## SmartClock
-
+minimalistic design 
 
 ## Features
 <ol>
