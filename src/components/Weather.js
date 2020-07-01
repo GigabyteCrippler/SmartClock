@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+import './index.css';
 const Skycons = require("skycons")(window);
 
 
@@ -63,9 +64,19 @@ class Weather extends React.Component {
 
 
    render(){
+     const mystyle = {
+      position: 'relative',
+      top: '40px',
+    left: '-250px',
+     color: "white",
+     padding: "10px",
+     fontFamily: "Krona One"
+
+   };
       return (
-        <div>
+        <div style={mystyle} >
         <div>  <canvas ref={this.ref} width="128" height="128" /> </div>
+        <p>{this.state.timezone}</p>
         <p>{this.state.latitude}</p>
         <p>{this.state.longitude}</p>
         <p>{this.state.data}</p>
