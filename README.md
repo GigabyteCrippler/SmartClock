@@ -14,7 +14,7 @@
 <li>Weather forecast</li>
 </ol>
 
-## Scrrenshot
+## Screenshot
 ![Screen Shot 2020-07-01 at 6 46 23 PM](https://user-images.githubusercontent.com/45514949/86283510-bdcad600-bbd0-11ea-9c51-f8c5f2dd012c.png)
 
 
