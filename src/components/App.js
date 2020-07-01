@@ -9,7 +9,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      Time : new Date().toLocaleString(),
+      Time : new Date(),
       Date : new Date().toDateString(),
       Hours: new Date().getHours(),
       TwentyFourHours: false ,
@@ -20,6 +20,36 @@ class App extends React.Component {
 
 
 
+  //
+  componentDidMount() {
+     this.interval = setInterval(() => this.setState({ Time :  new Date()  }), 1000);
+  }
+
+  // componentDidUpdate(){
+  // //    this.skyconsFunction();
+  // }
+
+  // componentWillUnmount() {
+  //   clearInterval(this.interval);
+  // }
+
+
+   // componentDidMount(){
+   //        this.startTime()
+   //    }
+   //
+   //    componentWillUnmount() {
+   //            clearInterval(this.timer);
+   //        }
+   //
+   //  startTime() {
+   //      this.timer = setInterval(() => {
+   //          this.setState(() => ({   Time :this.state.Time.substring(10,24)  }));
+   //      }, 1000);
+   //  }
+   // this.state.Time.substring(10,24
+
+
 
 
    render(){
@@ -27,7 +57,7 @@ class App extends React.Component {
         <div className="trial">
         <div> <Weather/> </div>
           <div className = 'center'>
-            <p className = 'time'>{this.state.Time.substring(10,24)}</p>
+            <p className = 'time'>{this.state.Time}</p>
             <p className = 'date'>{this.state.Date}</p>
             <p>{this.state.Hours}</p>
           </div>

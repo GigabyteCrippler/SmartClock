@@ -12,7 +12,7 @@ class Weather extends React.Component {
       temperature : null ,
       summary : null ,
       timezone : null ,
-      icon : null ,
+      icon : 'CLOUDY' ,
     };
      this.skyconsFunction = this.skyconsFunction.bind(this);
    }
@@ -28,7 +28,7 @@ class Weather extends React.Component {
     }
 
 
-
+// longitude and latitude should be automatic
     navigationFunction(){
       navigator.geolocation.getCurrentPosition(
       position => this.setState({
