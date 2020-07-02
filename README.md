@@ -1,5 +1,5 @@
 ## SmartClock
-minimalistic design 
+Easily modifiable , lightweight , minimalistic design built using React JS , Dark Sky API , Skycons 
 
 ## Features
 <ol>
