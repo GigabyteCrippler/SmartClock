@@ -1,5 +1,6 @@
 ## SmartClock
-Easily modifiable , lightweight , minimalistic design built using React JS , Dark Sky API , Skycons 
+Easily modifiable , lightweight , minimalistic design built using React JS , Dark Sky API , Skycons . The code is constantly being updated 
+
 
 ## Features
 <ol>
@@ -13,6 +14,20 @@ Easily modifiable , lightweight , minimalistic design built using React JS , Dar
 
 <li>Weather forecast</li>
 </ol>
+
+
+## Future Modifications
+<ol>
+<li> 12/24 toggle option   </li>
+
+<li> toggle between Celcuis and Fahrenheit </li>
+
+<li>Background image changes depending on time</li>
+
+<li>  setinterval to update time every secound  </li>
+
+</ol>
+
 
 ## Screenshot
 ![Screen Shot 2020-07-01 at 6 46 23 PM](https://user-images.githubusercontent.com/45514949/86283510-bdcad600-bbd0-11ea-9c51-f8c5f2dd012c.png)
