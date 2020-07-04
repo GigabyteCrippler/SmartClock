@@ -1,5 +1,5 @@
 ## SmartClock
-Easily modifiable , lightweight , minimalistic design built using React JS , Dark Sky API , Skycons , Krona one font use <a href="https://fonts.google.com/specimen/Krona+One?selection.family=Krona+One&sidebar.open#glyphs">Krona One</a> . The code is constantly being updated 
+Easily modifiable , lightweight , minimalistic design built using React JS , Dark Sky API , Skycons , The font <a href="https://fonts.google.com/specimen/Krona+One?selection.family=Krona+One&sidebar.open#glyphs">Krona One</a> was used  . The code is constantly being updated 
 
 
 ## Features
