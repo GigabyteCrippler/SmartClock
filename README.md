@@ -29,6 +29,7 @@ Easily modifiable , lightweight , minimalistic design built using React JS , Dar
 </ol>
 
 ## FIXES
+problem with background-image , isnt absolute 
 
 
 
