@@ -14,6 +14,12 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+  this.interval = setInterval(() => this.setState({ Time : new Date().toLocaleString(), }), 1000);
+}
+componentWillUnmount() {
+  clearInterval(this.interval);
+}
 
 
    render(){
