@@ -14,7 +14,10 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
+
+// component did mount and component Will Unmount reset the time to update every secound 
+
+componentDidMount() {
   this.interval = setInterval(() => this.setState({ Time : new Date().toLocaleString(), }), 1000);
 }
 componentWillUnmount() {

@@ -28,6 +28,8 @@ class Weather extends React.Component {
       this.skyconsFunction();
     }
 
+    // gets the current location when the client allows geolocation on their browser
+    // and sets the states to the current position of the client  
     navigationFunction(){
       navigator.geolocation.getCurrentPosition(
       position => this.setState({
@@ -36,6 +38,11 @@ class Weather extends React.Component {
       },console.log(position)))
     }
 
+
+
+    // proxy being put before the darksky api is to prevent a CORS error 
+    // the information from the api is taken and changed into  json format
+    // the data from the api is then used to update the states
     apiRequest(){
       const proxy = 'https://cors-anywhere.herokuapp.com/';
       const api = `${proxy}https://api.darksky.net/forecast/8d2330fcf8903ed8a4fd1f337ec77849/${this.state.longitude},${this.state.latitude}`;
@@ -51,7 +58,10 @@ class Weather extends React.Component {
     }
 
 
-
+      // function from skycons.com(https://darkskyapp.github.io/skycons/) for setting up SVGS
+      // .replace method is used because data from the api and from skycons are 
+      // written diffrently underscore instead of a dash and upper case instead of lower case
+      // using the methods made the informatin from both sources match
     skyconsFunction(){
       const skycons = new Skycons({ color: "white" });
       const currentIcon = (this.state.icon).replace(/-/g, "_").toUpperCase() ;
