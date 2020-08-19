@@ -24,7 +24,7 @@ Easily modifiable , lightweight , minimalistic design built using React JS , Dar
 
 <li>Background image changes depending on time</li>
 
-<li>  setinterval to update time every secound  </li>
+<li>  background image should remain static  </li>
 
 </ol>
 
