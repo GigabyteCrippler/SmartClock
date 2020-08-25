@@ -1,10 +1,10 @@
 ## SmartClock
-Easily modifiable , lightweight , minimalistic design built using React JS , Dark Sky API , Skycons , The font <a href="https://fonts.google.com/specimen/Krona+One?selection.family=Krona+One&sidebar.open#glyphs">Krona One</a> was used  . code is constantly being updated 
+Easily modifiable , lightweight , minimalistic design built using React JS , Dark Sky API , Skycons , The font <a href="https://fonts.google.com/specimen/Krona+One?selection.family=Krona+One&sidebar.open#glyphs">Krona One</a> was used  . code is constantly being updated, (if error occurs reload browser)
 
 
 ## Features
 <ol>
-<li>Time</li>
+<li>Time (to switch between 2 and 12 hour click th time )</li>
 
 <li>Date</li>
 
@@ -18,13 +18,16 @@ Easily modifiable , lightweight , minimalistic design built using React JS , Dar
 
 ## Future Modifications
 <ol>
-<li> 12/24 toggle option   </li>
 
 <li> toggle between Celcuis and Fahrenheit </li>
 
 <li>Background image changes depending on time</li>
 
 <li>  background image should remain static  </li>
+
+<li>location not exact (not narrow enough) </li>
+
+<li> create github pages </li>
 
 </ol>
 
